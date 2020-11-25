@@ -2,9 +2,9 @@
 	$url = "https://hayabusa.open2ch.net/livejupiter/dat/1593687649.dat";
 	//$url = "https://open2ch.net/dev/ranking.cgi";
 	//$url = "http://open2ch.net/dev/toukei.cgi?d=2020-11-25";
-	$conn = curl_init(); // cURLセッションの初期化
-	curl_setopt($conn, CURLOPT_URL, $url); //　取得するURLを指定
-	curl_setopt($conn, CURLOPT_RETURNTRANSFER, true); // 実行結果を文字列で返す。
+	$conn = curl_init();
+	curl_setopt($conn, CURLOPT_URL, $url);
+	curl_setopt($conn, CURLOPT_RETURNTRANSFER, true);
 	$res =  curl_exec($conn);
 	curl_close($conn);
 	//file_put_contents("/home/tk16/tk16.webcrow.jp/public_html/onj/contents.txt", $res);
